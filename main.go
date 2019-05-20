@@ -134,6 +134,8 @@ func waitForNotification(l *pq.Listener) {
 				}
 				Url.RawQuery = parameters.Encode()
 	
+				fmt.Println(Url.String())
+
 				_, err = http.Get(Url.String())
 				if err != nil {
 					fmt.Println("ERROR", err)
